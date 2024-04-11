@@ -1,8 +1,17 @@
 <template>
-  <i class="gg-menu" :style="{}"></i>
+  <i class="gg-menu" :style="{ color }"></i>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    color: {
+      type: String,
+      default: 'currentColor'
+    }
+  }
+}
+</script>
 
 <style scoped>
 .gg-menu {
