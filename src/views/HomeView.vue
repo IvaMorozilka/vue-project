@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import EntryContent from '@/components/EntryContent.vue'
 
 const index = ref(0)
 const animate = ref(false)
@@ -31,29 +32,31 @@ const resetAnimation = () => {
         />
       </video>
     </div>
-  </main>
-  <header>
-    <div id="home-header__container" class="container mx-auto px-4 max-w-5xl relative">
-      <div id="home-header__text__container" class="h-screen flex justify-between flex-col">
-        <div
-          id="home-header__text"
-          class="h-screen flex justify-center flex-col text-4xl text-white font-light"
-        >
-          <h2 class="flex">
-            Получите
-            <div
-              class="pl-3 font-bold"
-              :class="{ 'fade-in': animate }"
-              @animationend="resetAnimation"
-            >
-              {{ currentText }}
-            </div>
-          </h2>
-          <h2>для бизнеса на выгодных<br />условиях</h2>
+    <header class="text-white">
+      <div id="home-header__container" class="container mx-auto px-4 max-w-5xl relative">
+        <div id="home-header__text__container" class="h-screen flex justify-between flex-col">
+          <div
+            id="home-header__text"
+            class="h-screen flex justify-center flex-col text-4xl font-light"
+          >
+            <h2 class="flex">
+              Получите
+              <div
+                class="pl-3 font-bold"
+                :class="{ 'fade-in': animate }"
+                @animationend="resetAnimation"
+              >
+                {{ currentText }}
+              </div>
+            </h2>
+            <h2>для бизнеса на выгодных<br />условиях</h2>
+          </div>
+          <div id="home-header__contact">+79999999999</div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+    <EntryContent />
+  </main>
 </template>
 
 <style scoped>
