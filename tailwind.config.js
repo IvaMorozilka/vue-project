@@ -10,9 +10,10 @@ export default {
       colors: {
         'header-1': '#1e2549',
         accent: '#f3ba19',
-        'main-1': '#4A4A4C'
+        'main-1': '#4A4A4C',
+        'main-2': '#084778'
       }
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-animated')]
 }

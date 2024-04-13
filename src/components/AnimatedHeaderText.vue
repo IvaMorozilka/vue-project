@@ -5,38 +5,42 @@ const props = defineProps({
   text: Array
 })
 const index = ref(0)
-const animateIn = ref(false)
-const animateOut = ref(false)
+const animate = ref(false)
+// const animateOut = ref(false)
 const delay = 2000
 
 const currentText = computed(() => props.text[Object.keys(props.text)[index.value]])
 
 onMounted(() => {
   setInterval(() => {
-    animateIn.value = true
+    animate.value = true
     index.value = (index.value + 1) % Object.keys(props.text).length
   }, delay)
 })
 
 const resetAnimation = () => {
-  animateIn.value = false
+  animate.value = false
 }
 </script>
 
 <template>
-  <div class="pl-3 font-bold" :class="{ 'fade-in': animateIn }" @animationend="resetAnimation">
+  <div
+    class="pl-3 font-bold"
+    :class="{ 'animate-fade animate-once animate-ease-out': animate }"
+    @animationend="resetAnimation"
+  >
     {{ currentText }}
   </div>
 </template>
 
 <style scoped>
-@keyframes slideIn {
+/* @keyframes slideIn {
   from {
-    transform: translateY(-50%) rotateX(90deg);
+    transform: translateY(0%);
     opacity: 0;
   }
   to {
-    transform: translateY(0) rotateX(0deg);
+    transform: translateY(50%);
     opacity: 1;
   }
 }
@@ -58,5 +62,5 @@ const resetAnimation = () => {
 
 .fade-out {
   animation: slideOut 0.5s;
-}
+} */
 </style>

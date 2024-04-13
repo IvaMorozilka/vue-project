@@ -1,4 +1,5 @@
 <script setup>
+import CaseCard from './cards/CaseCard.vue'
 import MainContainer from './marking/MainContainer.vue'
 import IconLink from '@/components/icons/IconLink.vue'
 </script>
@@ -19,6 +20,19 @@ import IconLink from '@/components/icons/IconLink.vue'
           опытом работы, позволяет нам быть уверенными в успехе самых сложных случаев привлечения
           финансирования в юрисдикции РФ
         </p>
+      </div>
+    </div>
+    <div>
+      <div class="flex items-center justify-between">
+        <h2 class="text-main-2 text-2xl uppercase font-medium pt-[50px] pb-[60px]">
+          Успешные кейсы компании
+        </h2>
+        <p class="text-accent text-sm uppercase font-medium pt-[45px]">Читать все кейсы</p>
+      </div>
+      <div class="pt-[10px] flex gap-4">
+        <CaseCard />
+        <CaseCard />
+        <CaseCard />
       </div>
     </div>
   </MainContainer>
