@@ -1,5 +1,6 @@
 <script setup>
 import IconMenu from '@/components/icons/IconMenu.vue'
+import MainContainer from './marking/MainContainer.vue'
 import { ref } from 'vue'
 
 const color = ref('white')
@@ -11,7 +12,7 @@ function changeColor() {
 <template>
   <div id="class-header" class="fixed top-0 left-0 w-full z-10">
     <div id="site-header__inner">
-      <div class="container mx-auto px-4 max-w-5xl">
+      <MainContainer>
         <div id="site-header__layout" class="flex justify-between items-center py-10">
           <div id="site-header__logo" class="mr-12">
             <img src="@/assets/sample_logo.png" width="100" height="20" />
@@ -25,7 +26,7 @@ function changeColor() {
             <IconMenu :color="color" />
           </button>
         </div>
-      </div>
+      </MainContainer>
     </div>
   </div>
 </template>

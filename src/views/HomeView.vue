@@ -1,25 +1,8 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
 import EntryContent from '@/components/EntryContent.vue'
+import AnimatedHeaderText from '@/components/AnimatedHeaderText.vue'
 
-const index = ref(0)
-const animate = ref(false)
-
-const textArray = ['фа', 'факто', 'факторинг', 'еще что-то']
-const delay = 2500
-
-const currentText = computed(() => textArray[Object.keys(textArray)[index.value]])
-
-onMounted(() => {
-  setInterval(() => {
-    animate.value = true
-    index.value = (index.value + 1) % Object.keys(textArray).length
-  }, delay)
-})
-
-const resetAnimation = () => {
-  animate.value = false
-}
+const headerText = ['факторинг 1', 'факторинг 2', 'факторинг 3']
 </script>
 
 <template>
@@ -40,18 +23,12 @@ const resetAnimation = () => {
             class="h-screen flex justify-center flex-col text-4xl font-light"
           >
             <h2 class="flex">
-              Получите
-              <div
-                class="pl-3 font-bold"
-                :class="{ 'fade-in': animate }"
-                @animationend="resetAnimation"
-              >
-                {{ currentText }}
-              </div>
+              Получите <br />
+              <AnimatedHeaderText :text="headerText" />
             </h2>
             <h2>для бизнеса на выгодных<br />условиях</h2>
           </div>
-          <div id="home-header__contact">+79999999999</div>
+          <div id="home-header__contact">+7 999 999-99-99</div>
         </div>
       </div>
     </header>
@@ -59,17 +36,4 @@ const resetAnimation = () => {
   </main>
 </template>
 
-<style scoped>
-.fade-in {
-  animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-</style>
+<style scoped></style>

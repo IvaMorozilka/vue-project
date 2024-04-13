@@ -1,7 +1,9 @@
-<script scoped></script>
+<script setup>
+import MainContainer from './marking/MainContainer.vue'
+</script>
 
 <template>
-  <div id="enrty-content" class="h-96">Контент</div>
+  <MainContainer class="py-36"> </MainContainer>
 </template>
 
 <style scoped></style>

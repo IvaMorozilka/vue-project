@@ -6,7 +6,13 @@ export default {
     './src/**/*.{js,jsx,ts,tsx,vue}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'header-1': '#1e2549',
+        accent: '#f3ba19',
+        'main-1': '#4A4A4C'
+      }
+    }
   },
   plugins: []
 }
