@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import SiteHeader from './components/SiteHeader.vue'
+import SiteHeader from './components/content/SiteHeader.vue'
 </script>
 
 <template>

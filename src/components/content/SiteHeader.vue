@@ -1,6 +1,6 @@
 <script setup>
 import IconMenu from '@/components/icons/IconMenu.vue'
-import MainContainer from './marking/MainContainer.vue'
+import MainContainer from '../marking/MainContainer.vue'
 import { computed, onBeforeMount, ref } from 'vue'
 
 const color = computed(() => (topOfPage.value ? 'white' : 'black'))
@@ -31,7 +31,7 @@ onBeforeMount(() => {
       <MainContainer>
         <div id="site-header__layout" class="flex justify-between items-center py-10">
           <div id="site-header__logo" class="mr-12">
-            <img src="@/assets/sample_logo.png" width="100" height="20" />
+            <img src="../../assets/sample_logo.png" width="100" height="20" />
             <p class="font-medium uppercase text-xs" :style="{ color }">Logo description</p>
           </div>
           <button
