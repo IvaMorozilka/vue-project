@@ -1,6 +1,7 @@
 <script setup>
 import CaseCard from '../cards/CaseCard.vue'
 import MainContainer from '../marking/MainContainer.vue'
+import Button from "primevue/button";
 </script>
 
 <template>
@@ -33,6 +34,7 @@ import MainContainer from '../marking/MainContainer.vue'
         <CaseCard/>
         <CaseCard/>
       </div>
+      <Button label="Hello world"/>
     </div>
   </MainContainer>
 </template>
