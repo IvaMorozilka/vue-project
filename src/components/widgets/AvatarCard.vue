@@ -6,7 +6,7 @@
       <span class="bg-amber-400 absolute w-full h-24 top-0 left-0 rounded-t-[6px] z-[-1]"></span>
     </template>
     <template #title>
-      <Avatar image="/vue-project/src/assets/employee.webp" size="xlarge" shape="circle"/>
+      <Avatar :image="avatar" size="xlarge" shape="circle"/>
       <h2 class="uppercase text-center text-base">Имя Фамилия</h2>
     </template>
     <template #content>
@@ -31,7 +31,7 @@
 
 <script setup>
 import {ref} from "vue";
-
+import avatar from "@/assets/avatar.jpg"
 const hover = ref(false)
 </script>
 
