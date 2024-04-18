@@ -1,6 +1,6 @@
 <script setup>
-import CaseCard from '../cards/CaseCard.vue'
-import MainContainer from '../marking/MainContainer.vue'
+import CaseCard from '@/components/widgets/CaseCard.vue'
+import MainContainer from '../shared/MainContainer.vue'
 </script>
 
 <template>
@@ -21,20 +21,22 @@ import MainContainer from '../marking/MainContainer.vue'
         </p>
       </div>
     </div>
-    <div>
+  </MainContainer>
+  <div class = "bg-gray-100">
+    <MainContainer class = "pb-[80px]">
       <div class="flex items-center justify-between">
         <h2 class="text-main-2 text-2xl uppercase font-medium pt-[50px] pb-[60px]">
           Успешные кейсы компании
         </h2>
         <p class="text-accent text-sm uppercase font-medium pt-[45px]">Читать все кейсы</p>
       </div>
-      <div class="pt-[10px] flex gap-4 justify-center">
+      <div class="pt-[10px] flex justify-between">
         <CaseCard/>
         <CaseCard/>
         <CaseCard/>
       </div>
-    </div>
-  </MainContainer>
+    </MainContainer>
+  </div>
 </template>
 
 <style scoped>

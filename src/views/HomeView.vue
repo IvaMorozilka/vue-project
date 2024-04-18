@@ -1,6 +1,6 @@
 <script setup>
 import EntryContent from '@/components/content/EntryContent.vue'
-import AnimatedHeaderText from '@/components/AnimatedHeaderText.vue'
+import AnimatedHeaderText from '@/components/widgets/AnimatedHeaderText.vue'
 
 const headerText = ['факторинг 1', 'факторинг 2', 'факторинг 3']
 </script>

@@ -1,6 +1,6 @@
 <script setup>
 import IconMenu from '@/components/icons/IconMenu.vue'
-import MainContainer from '../marking/MainContainer.vue'
+import MainContainer from './MainContainer.vue'
 import { computed, onBeforeMount, ref } from 'vue'
 
 const color = computed(() => (topOfPage.value ? 'white' : 'black'))
@@ -28,21 +28,23 @@ onBeforeMount(() => {
     :class="{ 'bg-white bg-opacity-90': !topOfPage }"
   >
     <div id="site-header__inner">
-      <MainContainer>
+      <main-container>
         <div id="site-header__layout" class="flex justify-between items-center py-10">
           <div id="site-header__logo" class="mr-12">
             <img src="../../assets/sample_logo.png" width="100" height="20" />
             <p class="font-medium uppercase text-xs" :style="{ color }">Logo description</p>
           </div>
-          <button
-            id="site-header__menu"
-            class="w-10 h-10 flex justify-center items-center mr-12"
-            @click="changeColor"
-          >
-            <IconMenu :color="color" />
-          </button>
+          <router-link to="/test">
+            <button
+                id="site-header__menu"
+                class="w-10 h-10 flex justify-center items-center mr-12"
+                @click="changeColor"
+            >
+              <IconMenu :color="color" />
+            </button>
+          </router-link>
         </div>
-      </MainContainer>
+      </main-container>
     </div>
   </div>
 </template>
